@@ -4,3 +4,7 @@ resource "aws_iam_user" "bob" {
   tag-key = "Dev"
   }
 }
+
+resource "aws_iam_group" "devops" {
+  name = "devops"
+}
