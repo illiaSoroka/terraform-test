@@ -38,14 +38,20 @@ resource "aws_iam_user" "multiuser" {
 
 }
 
-# Create key_pair
+# Create a key pair in Virginia	(default)
 resource "aws_key_pair" "august23" {
   key_name   = "august23"
   public_key = file("~/.ssh/id_rsa.pub")
 }
 
+# Create a key pair in California
 resource "aws_key_pair" "august23-california" {
 	provider = aws.california
   key_name   = "august23-california"
   public_key = file("~/.ssh/id_rsa.pub")
+}
+
+# Create s3 bucket
+resource "aws_s3_bucket" "s3_buck_ilya_class1" {
+	bucket_prefix = "my_tf_"
 }
