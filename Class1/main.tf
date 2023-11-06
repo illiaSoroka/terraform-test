@@ -1,5 +1,5 @@
-resource "aws_iam_user" "bob" {
-  name = "bob"
+resource "aws_iam_user" "august23" {
+  name = "august23"
   tags = {
   tag-key = "Dev"
   }
