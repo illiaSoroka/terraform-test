@@ -3,16 +3,16 @@ provider "aws" {
 }
 
 provider "aws" {
-  alias = "oregon"
+  alias  = "oregon"
   region = "us-west-2"
 }
 
 provider "aws" {
-  alias = "ohio"
+  alias  = "ohio"
   region = "us-east-2"
 }
 
 provider "aws" {
-  alias = "california"
+  alias  = "california"
   region = "us-west-1"
 }
