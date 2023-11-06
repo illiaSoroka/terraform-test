@@ -46,6 +46,6 @@ resource "aws_key_pair" "august23" {
 
 resource "aws_key_pair" "august23-california" {
 	provider = aws.california
-  key_name   = "august23"
+  key_name   = "august23-california"
   public_key = file("~/.ssh/id_rsa.pub")
 }
