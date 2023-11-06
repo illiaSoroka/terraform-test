@@ -52,6 +52,6 @@ resource "aws_key_pair" "august23-california" {
 }
 
 # Create s3 bucket
-resource "aws_s3_bucket" "s3_buck_ilya_class1" {
-	bucket_prefix = "my_tf_"
+resource "aws_s3_bucket" "s3-buck-ilya-class1" {
+	bucket_prefix = "my-tf-"
 }
