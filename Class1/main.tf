@@ -51,7 +51,7 @@ resource "aws_key_pair" "august23-california" {
   public_key = file("~/.ssh/id_rsa.pub")
 }
 
-# # Create s3 bucket
-# resource "aws_s3_bucket" "s3-buck-ilya-class1" {
-#   bucket_prefix = "my-tf-"
-# }
+# Create s3 bucket
+resource "aws_s3_bucket" "s3-buck-ilya-class1" {
+  bucket_prefix = "my-tf-"
+}
