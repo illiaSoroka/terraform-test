@@ -18,6 +18,10 @@ resource "aws_iam_group_membership" "devops-team" {
 
   users = [
     aws_iam_user.august23.name,
+		aws_iam_user.multiuser["lisa"],
+		aws_iam_user.multiuser["bob"],
+		aws_iam_user.multiuser["sam"],
+
   ]
 
   group = aws_iam_group.devops.name
