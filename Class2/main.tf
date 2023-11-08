@@ -58,6 +58,7 @@ resource "aws_instance" "web" {
   ami             = data.aws_ami.ubuntu.id
   instance_type   = "t3.micro"
   key_name        = aws_key_pair.class2.key_name
+  associate_public_ip_address = true
   vpc_security_group_ids = [
     aws_security_group.class2-sec-group.id
     ]
