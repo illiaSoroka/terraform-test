@@ -19,7 +19,7 @@ data "aws_ami" "ubuntu" {
 resource "aws_instance" "web" {
   ami             = data.aws_ami.ubuntu.id
   instance_type   = "t3.micro"
-  key_name        = aws_key_pair.class2key.key_name
+  key_name        = aws_key_pair.class2-key.key_name
 }
 
 resource "aws_key_pair" "deployer" {
