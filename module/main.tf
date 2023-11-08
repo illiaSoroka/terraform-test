@@ -1,3 +1,3 @@
 module python {
-  source = "./Class2"
+  source = "../Class2"
 }
