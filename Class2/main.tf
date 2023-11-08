@@ -67,7 +67,5 @@ resource "aws_instance" "web" {
 }
 
 
-output info {
-  value = aws_instance.web
-}
+
 
