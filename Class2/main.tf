@@ -17,11 +17,12 @@ data "aws_ami" "ubuntu" {
 
 # Create ec2 instance
 resource "aws_instance" "web" {
-  ami           = data.aws_ami.ubuntu.id
-  instance_type = "t3.micro"
+  ami             = data.aws_ami.ubuntu.id
+  instance_type   = "t3.micro"
+  key_name        = aws_key_pair.class2key.key_name
 }
 
 resource "aws_key_pair" "deployer" {
-  key_name   = "class2-key"
-  public_key = file("~/.ssh/id_rsa.pub")
+  key_name        = "class2-key"
+  public_key      = file("~/.ssh/id_rsa.pub")
 }
