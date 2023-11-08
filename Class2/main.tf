@@ -23,6 +23,7 @@ resource "aws_instance" "web" {
   vpc_security_group_ids = [
     aws_security_group.class2-sec-group.id
     ]
+  user_data = file("userdata.sh")
 }
 
 
