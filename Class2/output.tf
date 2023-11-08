@@ -10,6 +10,3 @@
 #   value = aws_instance.web.arn
 # }
 
-output info {
-  value = aws_instance.web
-}
