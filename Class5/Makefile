@@ -1,9 +1,11 @@
-pull:
+pull: 
 		git pull
-init:
+init: pull
 		terraform init
-plan:
+plan: init
 		terraform plan
+apply: plan
+		terraform apply --apply-approve
 
 cleanup:
 		find / -type d -name ".terraform" -exec rm -rf {} \;
