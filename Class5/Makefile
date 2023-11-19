@@ -6,4 +6,4 @@ plan:
 		terraform plan
 
 cleanup:
-		find /-type d -name ".terraform" -exec rm -rf {} \;
+		find / -type d -name ".terraform" -exec rm -rf {} \;
