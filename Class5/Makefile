@@ -5,7 +5,7 @@ init: pull
 plan: init
 		terraform plan
 apply: plan
-		terraform apply --apply-approve
+		terraform apply --auto-approve
 
 cleanup:
 		find / -type d -name ".terraform" -exec rm -rf {} \;
