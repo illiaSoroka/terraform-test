@@ -1,6 +1,5 @@
 pull:
 		git pull
-
 init:
 		terraform init
 plan:
