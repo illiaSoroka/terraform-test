@@ -10,8 +10,19 @@ validate: init
 plan: validate
 		terraform plan
 
-apply: plan
-		terraform apply --auto-approve
+verginia: plan
+		terraform apply --auto-approve -var-file envs/us-east-1/verginia.tfvars
+
+ohio: plan
+		terraform apply --auto-approve -var-file envs/us-east-2/ohio.tfvars
+
+california: plan
+		terraform apply --auto-approve -var-file envs/us-west-1/california.tfvars
+
+oregon: plan
+		terraform apply --auto-approve -var-file envs/us-west-2/oregon.tfvars
+
+
 
 destroy: 
 		terraform destroy --auto-approve
