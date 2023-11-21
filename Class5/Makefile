@@ -5,6 +5,7 @@ init: pull
 		terraform init
 	
 validate: init
+		terraform validate
 
 plan: validate
 		terraform plan
