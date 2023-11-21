@@ -12,7 +12,7 @@ plan: validate
 apply: plan
 		terraform apply --auto-approve
 
-destroy: plan
+destroy: 
 		terraform destroy --auto-approve
 
 cleanup:
