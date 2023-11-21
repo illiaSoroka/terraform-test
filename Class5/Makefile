@@ -22,6 +22,18 @@ california: plan
 oregon: plan
 		terraform apply --auto-approve -var-file envs/us-west-2/oregon.tfvars
 
+verginia-destroy: 
+		terraform destroy --auto-approve -var-file envs/us-east-1/verginia.tfvars
+
+ohio-destroy: 
+		terraform destroy --auto-approve -var-file envs/us-east-2/ohio.tfvars
+
+california-destroy: 
+		terraform destroy --auto-approve -var-file envs/us-west-1/california.tfvars
+
+oregon-destroy: 
+		terraform destroy --auto-approve -var-file envs/us-west-2/oregon.tfvars
+
 
 
 destroy: 
