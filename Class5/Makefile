@@ -4,10 +4,10 @@ pull:
 init: pull
 		terraform init
 	
-validate: init
+validate: 
 		terraform validate
 
-plan: validate
+plan: init
 		terraform plan
 
 virginia: plan
