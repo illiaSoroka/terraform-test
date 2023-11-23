@@ -44,4 +44,4 @@ cleanup:
 
 all: make ohio && make virginia && make california && make oregon
 
-destroy-all: make destroy-ohio && make destroy-virginia && make destroy-oregon && make destroy-california
+destroy-all: make ohio-destroy && make virginia-destroy && make oregon-destroy && make california-destroy
