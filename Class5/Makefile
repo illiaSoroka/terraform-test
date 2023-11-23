@@ -11,28 +11,28 @@ plan: init
 		terraform plan
 
 virginia: plan
-		terraform apply --auto-approve -var-file envs/us-east-1/virginia.tfvars
+		terraform workspace new virginia || terraform workspace select virginia && terraform apply --auto-approve -var-file envs/us-east-1/virginia.tfvars
 
 ohio: plan
-		terraform apply --auto-approve -var-file envs/us-east-2/ohio.tfvars
+		terraform workspace new ohio || terraform workspace select ohio && terraform apply --auto-approve -var-file envs/us-east-2/ohio.tfvars
 
 california: plan
-		terraform apply --auto-approve -var-file envs/us-west-1/california.tfvars
+		terraform workspace new california || terraform workspace select california && terraform apply --auto-approve -var-file envs/us-west-1/california.tfvars
 
 oregon: plan
-		terraform apply --auto-approve -var-file envs/us-west-2/oregon.tfvars
+		terraform workspace new oregon || terraform workspace select oregon && terraform apply --auto-approve -var-file envs/us-west-2/oregon.tfvars
 
 virginia-destroy: 
-		terraform destroy --auto-approve -var-file envs/us-east-1/virginia.tfvars
+		terraform workspace new virginia || terraform workspace select virginia && terraform destroy --auto-approve -var-file envs/us-east-1/virginia.tfvars
 
 ohio-destroy: 
-		terraform destroy --auto-approve -var-file envs/us-east-2/ohio.tfvars
+		terraform workspace new ohio || terraform workspace select ohio && terraform destroy --auto-approve -var-file envs/us-east-2/ohio.tfvars
 
 california-destroy: 
-		terraform destroy --auto-approve -var-file envs/us-west-1/california.tfvars
+		terraform workspace new california || terraform workspace select california && terraform destroy --auto-approve -var-file envs/us-west-1/california.tfvars
 
 oregon-destroy: 
-		terraform destroy --auto-approve -var-file envs/us-west-2/oregon.tfvars
+		terraform workspace new oregon || terraform workspace select oregon && terraform destroy --auto-approve -var-file envs/us-west-2/oregon.tfvars
 
 
 
