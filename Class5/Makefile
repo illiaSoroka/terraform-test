@@ -41,3 +41,7 @@ destroy:
 
 cleanup:
 		find / -type d -name ".terraform" -exec rm -rf {} \;
+
+all: make ohio && make virginia && make california && make oregon
+
+destroy-all: make destroy-ohio && make destroy-virginia && make destroy-oregon && make destroy-california
