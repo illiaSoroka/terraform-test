@@ -10,16 +10,16 @@ validate:
 plan: init
 		terraform plan
 
-virginia: plan
+virginia: 
 		terraform workspace new virginia || terraform workspace select virginia && terraform apply --auto-approve -var-file envs/us-east-1/virginia.tfvars
 
-ohio: plan
+ohio: 
 		terraform workspace new ohio || terraform workspace select ohio && terraform apply --auto-approve -var-file envs/us-east-2/ohio.tfvars
 
-california: plan
+california: 
 		terraform workspace new california || terraform workspace select california && terraform apply --auto-approve -var-file envs/us-west-1/california.tfvars
 
-oregon: plan
+oregon: 
 		terraform workspace new oregon || terraform workspace select oregon && terraform apply --auto-approve -var-file envs/us-west-2/oregon.tfvars
 
 virginia-destroy: 
