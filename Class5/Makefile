@@ -34,16 +34,14 @@ california-destroy:
 oregon-destroy: 
 		terraform workspace new oregon || terraform workspace select oregon && terraform destroy --auto-approve -var-file envs/us-west-2/oregon.tfvars
 
-
-
 destroy: 
 		terraform destroy --auto-approve
-
-cleanup:
-		find / -type d -name ".terraform" -exec rm -rf {} \;
 
 all: 
 		make ohio && make virginia && make california && make oregon
 
 destroy-all: 
 		make ohio-destroy && make virginia-destroy && make oregon-destroy && make california-destroy
+
+cleanup:
+		find / -type d -name ".terraform" -exec rm -rf {} \;
