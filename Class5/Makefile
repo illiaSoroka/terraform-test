@@ -47,10 +47,10 @@ destroy:
 		terraform destroy --auto-approve
 
 all: 
-		make ohio && make virginia && make california && make oregon
+		make ohio && make virginia && make california && make oregon && make london
 
 destroy-all: 
-		make ohio-destroy && make virginia-destroy && make oregon-destroy && make california-destroy
+		make ohio-destroy && make virginia-destroy && make oregon-destroy && make california-destroy && make london-destroy
 
 cleanup:
 		find / -type d -name ".terraform" -exec rm -rf {} \;
