@@ -39,7 +39,7 @@ oregon-destroy:
 		terraform workspace new oregon || terraform workspace select oregon && terraform destroy --auto-approve -var-file envs/us-west-2/oregon.tfvars
 
 london-destroy: 
-		terraform workspace new london || terraform workspace select london && terraform destroy --auto-approve -var-file envs/us-west-2/london.tfvars
+		terraform workspace new london || terraform workspace select london && terraform destroy --auto-approve -var-file envs/eu-west-2/london.tfvars
 
 
 
